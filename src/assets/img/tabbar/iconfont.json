@@ -1,0 +1,93 @@
+{
+  "id": "3471916",
+  "name": "2022test",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "29869396",
+      "name": "3d",
+      "font_class": "a-3d",
+      "unicode": "e73a",
+      "unicode_decimal": 59194
+    },
+    {
+      "icon_id": "29869407",
+      "name": "Butterfly",
+      "font_class": "Butterfly",
+      "unicode": "e73b",
+      "unicode_decimal": 59195
+    },
+    {
+      "icon_id": "29869408",
+      "name": "Diagram root",
+      "font_class": "a-Diagramroot",
+      "unicode": "e73c",
+      "unicode_decimal": 59196
+    },
+    {
+      "icon_id": "29869413",
+      "name": "Hexagons",
+      "font_class": "Hexagons",
+      "unicode": "e73d",
+      "unicode_decimal": 59197
+    },
+    {
+      "icon_id": "4954932",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "5387518",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "eaf0",
+      "unicode_decimal": 60144
+    },
+    {
+      "icon_id": "8680528",
+      "name": "MBE风格常用图标-购物",
+      "font_class": "MBEfenggechangyongtubiao-gouwu",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "22759269",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "f7fd",
+      "unicode_decimal": 63485
+    },
+    {
+      "icon_id": "10130768",
+      "name": "纸箱回收",
+      "font_class": "zhixianghuishou",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "10130772",
+      "name": "可回收-布料类",
+      "font_class": "kehuishou-buliaolei",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "10130833",
+      "name": "可回收-金属类",
+      "font_class": "kehuishou-jinshulei",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "10130846",
+      "name": "可回收-纸类",
+      "font_class": "kehuishou-zhilei",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    }
+  ]
+}

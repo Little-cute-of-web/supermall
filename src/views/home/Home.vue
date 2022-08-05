@@ -8,8 +8,10 @@
     <swiper :banner="banner"></swiper>
     <home-recommend :recommend="recommend"></home-recommend>
     <home-feature></home-feature>
-    <tab-control :titles="titles" class="tab-control"></tab-control>
-    <goods-list :goods="goods['pop'].list"></goods-list>
+    <tab-control :titles="titles" class="tab-control"
+    @tabChange="tabChange"
+    ></tab-control>
+    <goods-list :goods="showGoods"></goods-list>
     <ul>
       <li></li>
       <li></li>
@@ -158,7 +160,8 @@ export default {
           page:0,
           list:[]
         }
-      }
+      },
+      currentType:'pop'
     }
   },
   components:{
@@ -179,6 +182,25 @@ export default {
     this.getHomeGoods('sell');
   },  
   methods:{
+    /* 
+    * 事件监听
+    */
+    tabChange(index){
+      switch(index){
+      case 0:
+        this.currentType='pop';
+        break;
+      case 1:
+        this.currentType='new';
+        break;
+      case 2:
+        this.currentType='sell';
+        break;
+      }
+    },
+    /* 
+    * 网络请求相关
+    */
     //请求主页banner*recommend
     getHomeMultidata(){
       getHomeMultidata().then(res=>{
@@ -198,6 +220,11 @@ export default {
       })
     }
   },
+  computed:{
+    showGoods(){
+      return this.goods[this.currentType].list
+    }
+  }
 }
 </script>
 <style scoped>
@@ -224,5 +251,6 @@ export default {
 .tab-control{
 position: sticky;
 top: 44px;
+z-index:99;
 }
 </style>

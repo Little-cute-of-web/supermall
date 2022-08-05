@@ -26,6 +26,7 @@ export default {
   methods: {
     changeTab(index){
       this.currentIndex=index;
+      this.$emit('tabChange',index);
     }
   },
 };

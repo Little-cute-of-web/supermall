@@ -23,6 +23,9 @@ module.exports = defineConfig({
         '@common': '@/common',
         '@components': '@/components',
         '@network': '@/network',
+        '@views':'@/views',
+        '@childrenComponents':'@/views/home/childrenComponents'
+        // '@router':'@/router'
       }
     }
   }

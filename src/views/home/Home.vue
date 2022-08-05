@@ -6,12 +6,14 @@
       </template>
     </nav-bar>
     <swiper :banner="banner"></swiper>
+    <home-recommend :recommend="recommend"></home-recommend>
   </div>
 </template>
 
 <script>
 import NavBar from '@components/common/navbar/NavBar';
 import Swiper from '@childrenComponents/swiper/Swiper.vue';
+import HomeRecommend from '@childrenComponents/homeRecommend/HomeRecommend'
 import {getHomeMultidata} from '@network/home.js';
 export default {
   name:'Home',
@@ -26,15 +28,14 @@ export default {
   },
   components:{
     NavBar,
-    Swiper
+    Swiper,
+    HomeRecommend
   },
   created(){
     //请求主页数据
     getHomeMultidata().then(res=>{
-      // console.log(res);
       this.banner=res.data.banner.list;
       this.recommend=res.data.recommend.list;
-      console.log(this.homeData);
     })
   }
 }

@@ -24,6 +24,9 @@ background-color: #f6f6f6;
 position: fixed;
 left:0;
 right:0;
-bottom:0;
+bottom:-2px;
+height: 49px;
+font-size: 16px;
+z-index:100;
 }
 </style>

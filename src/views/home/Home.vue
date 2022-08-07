@@ -12,7 +12,7 @@
     @tabChange="tabChange"
     ></tab-control>
     <goods-list :goods="showGoods"></goods-list>
-    <ul>
+    <!-- <ul>
       <li></li>
       <li></li>
       <li></li>
@@ -113,7 +113,7 @@
       <li></li>
       <li></li>
       <li></li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
@@ -213,7 +213,7 @@ export default {
       const page = this.goods[type].page+1;
       // console.log(page);
       getHomeGoods(type,page).then(res=>{
-        console.log(res);
+        // console.log(res);
         this.goods[type].list.push(...res.data.list);
         //页码加一
         this.goods[type].page+=1;

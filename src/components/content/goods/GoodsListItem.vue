@@ -1,9 +1,9 @@
 <template>
   <div class="goods-list-item">
-    <img :src="goodsItem.show.img" alt="" />
+    <img :src="goodsItem.show.img" alt="" @load="imgLoad" />
     <div class="goods-info">
-       <p>{{ goodsItem.title }}</p>
-       <span class="price">{{ goodsItem.price }}</span>
+      <p>{{ goodsItem.title }}</p>
+      <span class="price">{{ goodsItem.price }}</span>
       <span class="collect">{{ goodsItem.cfav }}</span>
     </div>
     <!-- <div class="desc">
@@ -28,7 +28,12 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    imgLoad() {
+      // console.log("imgLoad");
+      this.$bus.$emit("imgLoad");
+    },
+  },
 };
 </script>
 <style scoped>
@@ -36,31 +41,31 @@ export default {
   position: relative;
   width: 50%;
   text-align: center;
-  padding-bottom:40px;
+  padding-bottom: 40px;
 }
 .goods-list-item img {
   width: 175px;
 }
-.goods-info{
+.goods-info {
   overflow: hidden;
   position: absolute;
   bottom: 5px;
   left: 0;
   right: 0;
-  padding:0 7px ;
+  padding: 0 7px;
   text-align: center;
   font-size: 12px;
 }
-.goods-info p{
+.goods-info p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.goods-info .price{
+.goods-info .price {
   color: var(--color-high-text);
   margin-right: 20px;
 }
- /* .goods-info .collect{
+/* .goods-info .collect{
   position: relative;
 } 
 .goods-list-item p {

@@ -9,11 +9,17 @@ module.exports = {
     'eslint:recommended'
   ],
   parserOptions: {
-    parser: '@babel/eslint-parser', 
+    parser: '@babel/eslint-parser',
     "requireConfigFile": false
   },
   rules: {
-    'indent': ['error', 2],
+    indent: [
+      2,
+      2,
+      {
+        SwitchCase: 1, // （默认：0）指定 switch-case 语句的缩进级别
+      },
+    ], // 强制使用一致的缩进
     'no-multiple-empty-lines': [2, { //空行最多不能超过1行
       'max': 1
     }],

@@ -1,54 +1,47 @@
 <template>
-  <div class="goods-list-wrapper" ref="wrapper">
-    <div class="goods-list">
-    <goods-list-item v-for="item in goods" :key="item.acm" :goods-item="item"></goods-list-item>
-  </div>
+  <div class="goods-list-wrapper" ref="goodsListWrapper">
+    <div class="goods-list" ref="goodsList">
+      <goods-list-item
+        v-for="item in goods"
+        :key="item.link"
+        :goods-item="item"
+      ></goods-list-item>
+    </div>
   </div>
 </template>
 
 <script>
-import BScroll from 'better-scroll';
-import GoodsListItem from './GoodsListItem.vue'
+// import BScroll from "better-scroll";
+// import PullUp from "@better-scroll/pull-up";
+import GoodsListItem from "./GoodsListItem.vue";
 export default {
-  name:'GoodsList',
-  props:{
-    goods:{
-      type:Array,
-      default:()=>[]
-    }
-  },
-  mounted(){
-    this.$nextTick(()=>{
-      // this.scroll=new BScroll(this.$refs.GoodsListWrapper,{})
-      if (!this.scroll) {
-        this.scroll = new BScroll(this.$refs.wrapper, {})
-        // this.scroll.on('touchEnd', (pos) => {
-        //   // 下拉动作
-        //   if (pos.y > 50) {
-        //     this.loadData()
-        //   }
-        // })
-      } else {
-        this.scroll.refresh()
-      }
-    })
+  name: "GoodsList",
+  props: {
+    goods: {
+      type: Array,
+      default: () => [],
+    },
   },
   data() {
     return {
-        
-    }
+      // scroll: null,
+    };
   },
-  components:{
-    GoodsListItem
-  },
-  methods:{
+  mounted() {},
 
-  }
-}
+  components: {
+    GoodsListItem,
+  },
+  methods: {},
+};
 </script>
 <style scoped>
-.goods-list{
+/* .goods-list-wrapper {
+  height: 667px;
+} */
+.goods-list {
   display: flex;
   flex-wrap: wrap;
+  /* height: 500px; */
 }
 </style>

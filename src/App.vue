@@ -7,11 +7,12 @@
 
 <script>
 import "@assets/img/tabbar/iconfont.css";
-import MainTabBar from '@components/content/mainTabbar/MainTabBar';
+import "@assets/img/backtop/iconfont.css";
+import MainTabBar from "@components/content/mainTabbar/MainTabBar";
 export default {
   name: "App",
   components: {
-    MainTabBar
+    MainTabBar,
   },
 };
 </script>

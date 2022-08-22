@@ -36,7 +36,7 @@
 
 <script>
 //home组件私有
-import Swiper from "@childrenComponents/swiper/Swiper.vue";
+import Swiper from "./childrenComponents/homeSwiper/Swiper.vue";
 import HomeRecommend from "@childrenComponents/homeRecommend/HomeRecommend";
 import HomeFeature from "@childrenComponents/homeFeature/HomeFeature";
 //引入项目公共组件

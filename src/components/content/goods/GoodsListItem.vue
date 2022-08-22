@@ -1,5 +1,5 @@
 <template>
-  <div class="goods-list-item">
+  <div class="goods-list-item" @click="goodsItemClick">
     <img :src="goodsItem.show.img" alt="" @load="imgLoad" />
     <div class="goods-info">
       <p>{{ goodsItem.title }}</p>
@@ -32,6 +32,16 @@ export default {
     imgLoad() {
       // console.log("imgLoad");
       this.$bus.$emit("imgLoad");
+    },
+    goodsItemClick() {
+      console.log(this.goodsItem.iid);
+      this.$router.push("/detail/" + this.goodsItem.iid);
+      // query 传参
+      // this.$router.push({
+      //   path:'/detail',
+      //   query:{
+      //   }
+      // })
     },
   },
 };

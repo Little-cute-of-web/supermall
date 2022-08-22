@@ -8,6 +8,7 @@
 <script>
 import "@assets/img/tabbar/iconfont.css";
 import "@assets/img/backtop/iconfont.css";
+import "@assets/img/back/iconfont.css";
 import MainTabBar from "@components/content/mainTabbar/MainTabBar";
 export default {
   name: "App",

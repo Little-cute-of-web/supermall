@@ -31,16 +31,16 @@ export default {
 </script>
 <style scoped>
 .my-swiper .van-swipe-item {
-  color: #fff;
-  font-size: 20px;
-  /* height: 300px; */
+  /* color: #fff; */
+  /* font-size: 20px; */
+  height: 300px;
   /* line-height: 390px; */
   text-align: center;
-  background-color: #39a9ed;
+  /* background-color: #39a9ed; */
 }
 .my-swiper .van-swipe-item img {
   width: 100%;
-  height: 300px;
+  /* height: 300px; */
   overflow: hidden;
 }
 </style>

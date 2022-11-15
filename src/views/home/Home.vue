@@ -2,7 +2,7 @@
   <div id="home">
     <nav-bar class="nav-home">
       <template #center>
-        <div class="homeTitle">购物街</div>
+        <div class="homeTitle">中华伟大复兴</div>
       </template>
     </nav-bar>
     <tab-control
